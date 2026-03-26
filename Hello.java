@@ -1,6 +1,6 @@
 /**
  * @author Deepti Jana
- * @version 5.0
+ * @version 6.0
  *@since UC1
  */
 
@@ -10,13 +10,17 @@ public class Hello {
         if (args.length == 0) {
             System.out.println("Hello, World!");
         } else {
-            System.out.print("Hello ");
+
+            String greeting = "Hello ";
 
             for (String name : args) {
-                System.out.print(name + " ");
+                greeting += name + ", ";
             }
 
-            System.out.println();
+            // Remove last comma and space
+            greeting = greeting.substring(0, greeting.length() - 2);
+
+            System.out.println(greeting);
         }
     }
 }
